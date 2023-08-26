@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+
+body {
+  background-image: linear-gradient(to right, #673EB2, #fff);
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Cinzel', serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display SC', serif;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 5em;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.nav>.nav-header {
+  display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #000000;
+  padding: 0px 10px 10px 30px;
+}
+
+.nav>.nav-btn {
+  display: none;
+}
+
+.nav>.nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav>.nav-links>a {
+  display: inline-block;
+  padding: 40px 50px 13px 30px;
+  text-decoration: none;
+  color: #000000;
+}
+
+
+
+.nav>#nav-check {
+  display: none;
+}
+
+/* ######################   NAV RESPONSIVA */
+
+@media (max-width:600px) {
+  .nav>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav>.nav-btn>label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav>.nav-btn>label:hover,
+  .nav #nav-check:checked~.nav-btn>label {
+    background-color: #fff;
+  }
+
+  .nav>.nav-btn>label>span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #000000;
+  }
+
+  .nav>.nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+
+  .nav>.nav-links>a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav>#nav-check:not(:checked)~.nav-links {
+    height: 0px;
+  }
+
+  .nav>#nav-check:checked~.nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  img {
+    margin-left: 0;
+    align-items: center;
+  }
+}
+
+.imagem-de-fundo {
+  background-image: url('img/focus_studio.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+}
+
+
+
+/* ###################### IMAGEM DE FUNDO RESPONSIVA */
+
+/* Para telas pequenas, por exemplo, dispositivos móveis */
+@media (max-width: 767px) {
+  .imagem-de-fundo {
+    background-size: contain;
+    /* Ajusta o tamanho para caber */
+  }
+}
+
+/* Para telas médias e grandes */
+@media (min-width: 768px) {
+  .imagem-de-fundo {
+    background-size: cover;
+  }
+}
+
