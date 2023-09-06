@@ -65,7 +65,7 @@ img {
   display: none;
 }
 
-/* ######################   NAV RESPONSIVA */
+/* ######################   NAV RESPONSIVA ##################################### */
 
 @media (max-width:600px) {
   .nav>.nav-btn {
@@ -137,7 +137,7 @@ img {
 
 
 
-/* ###################### IMAGEM DE FUNDO RESPONSIVA */
+/* ###################### IMAGEM DE FUNDO RESPONSIVA ################################### */
 
 /* Para telas pequenas, por exemplo, dispositivos móveis */
 @media (max-width: 767px) {
